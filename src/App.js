@@ -1,4 +1,5 @@
 import './App.css';
+// import '../assets/fonds/fonts.css'
 import {Routes, Route} from "react-router-dom";
 import LandingPage from './pages/LandingPage/LandingPage';
 import NotFound from "./pages/NotFound/NotFound";
