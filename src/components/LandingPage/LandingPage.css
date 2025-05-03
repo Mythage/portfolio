@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Iceland&family=Outfit:wght@400;700&display=swap");
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-iceland), serif;
+    color: var(--primary-text);
+    /*background: var(--main-bg-color);*/
+    background: transparent;
+}
+body {
+    background: var(--main-bg-color);
+}
+/* ----------- Root Variables ----------- */
+:root {
+    --main-bg-color: #000003;
+    --primary-color: #2F8CA3;
+    --secondary-color: #F4AF2D;
+    --accent-color: #9CF9FF;
+    --primary-text: #FFFFFF;
+    /* Font Families */
+    --font-iceland: 'Iceland', cursive;
+    --font-big-shoulders: 'Big Shoulders Display', sans-serif;
+}
+
+/* ----------- Global Reset & Base Styles ----------- */
+html,
+body{
+    height: 100%;
+}
+
+
+/* ----------- Utility Classes ----------- */
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* ----------- Main Container ----------- */
+.container {
+    display: flex;
+    flex-direction: column; /* Verticale uitlijning */
+    justify-content: center; /* Verticale centrering */
+    align-items: center; /* Horizontale centrering */
+    width: 100%; /* Volledige breedte */
+    height: 100%; /* Volledige hoogte */
+    background: linear-gradient(
+        to top right,
+        var(--secondary-color) -20%,
+        transparent 25%,
+        transparent 75%,
+        var(--primary-color) 120%
+    );
+    outline: 1px solid red;
+}
+
+/* ----------- Article Element ----------- */
+.container article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "item-b item-c"
+        "item-b item-d"
+        "item-a item-e";
+    width: 50%;
+    padding: 20px;
+    gap: 1em;
+}
+
+.container article h1 {
+    display: flex;
+    align-items: center;
+}
+
+.container article section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container article section h4,
+.container article section p,
+.container article section .button {
+    margin-bottom: 0.5em;
+}
+
+.item-b {
+    /*font-size: clamp(2rem, 10vw, 8rem);*/
+    color: var(--primary-color);
+    font-family: var(--font-big-shoulders), serif;
+    font-weight: 700;
+    font-size: 20em; /* Responsieve grootte */
+    line-height: 1.2em;
+    letter-spacing: -.05em;
+    text-transform: uppercase;
+    justify-content: right;
+}
+
+.item-c {
+    grid-area: item-c;
+}
+
+.item-d {
+    grid-area: item-d;
+}
+
+.item-e {
+    grid-area: item-e;
+}
+
+
+/* ----------- Typography ----------- */
+.h1 {
+
+}
+
+.welcome {
+    font-family: var(--font-big-shoulders), serif;
+    font-weight: 400;
+    font-size: 1.5em; /* Responsieve grootte */
+    line-height: 1.2em;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    text-align: left; /* Centreer de tekst */
+}
+
+.text {
+    font-family: var(--font-big-shoulders), serif;
+    font-weight: 400;
+    font-size: 1em; /* Responsieve grootte */
+    line-height: 1.3em;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    text-align: left; /* Centreer de tekst */
+}
+
+/* ----------- Button ----------- */
+.button {
+    color: var(--primary-color);
+    font-family: var(--font-big-shoulders), serif;
+    font-weight: 700;
+    font-size: 1.2em; /* Responsieve grootte */
+    line-height: 1.2em;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    align-self: center; /* Centreer de button */
+    text-decoration: none; /* Verwijder de onderstreping */
+}
+.button:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* ----------- Media Queries ----------- */
+/* Voor kleinere schermen, bijvoorbeeld mobiel */
+@media (max-width: 768px) {
+    .hi {
+        font-size: 3em;
+    }
+
+    .welcome {
+        font-size: 1.2em;
+    }
+
+    .text {
+        font-size: 0.9em;
+    }
+
+    .container article {
+        width: 90%; /* Meer breedte op kleinere schermen */
+    }
+}
