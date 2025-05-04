@@ -1,5 +1,6 @@
 import React from "react";
-import './LandingPage.css'
+import './LandingPage.css';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
     return (
@@ -12,11 +13,11 @@ function LandingPage() {
                         all text inside is trying to reflect on this.</p>
                     <p className='text item-d'>you will find 'achievements' or 'quests' that show the progress in
                         my professional life and are related to what i am working on</p>
-                    <button type="button" className='button item-e'> Enter The System</button>
+                    <Link to="/home" className='button item-e'>Enter The System</Link>
                 </section>
             </article>
-            <p className='text item-f'>If your not what this and you want to stay out of the system en there is the option to
-                go for a plain loadout. </p>
+            {/*<p className='text item-f'>If your what a normal business overview and stay out of the system, then select*/}
+            {/*    go for a plain loadout. </p>*/}
         </div>
     )
 }

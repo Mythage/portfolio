@@ -1,12 +1,12 @@
 import './App.css';
 // import '../assets/fonds/fonts.css'
 import {Routes, Route} from "react-router-dom";
-import LandingPage from './components/LandingPage/LandingPage';
-import NotFound from "./components/NotFound/NotFound";
-import HomePage from "./components/Home/HomePage";
-import AboutMe from "./components/AboutMe/AboutMe";
-import Achievements from "./components/Achievements/Achievements";
-import Creations from "./components/Creations/Creations";
+import LandingPage from './Pages/LandingPage/LandingPage';
+import NotFound from "./Pages/NotFound/NotFound";
+import HomePage from "./Pages/Home/HomePage";
+import AboutMe from "./Pages/AboutMe/AboutMe";
+import Achievements from "./Pages/Achievements/Achievements";
+import Creations from "./Pages/Creations/Creations";
 function App() {
   return (
       <>
