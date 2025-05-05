@@ -27,7 +27,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     font-family: var(--font-iceland), serif;
-    color: var(--primary-text);
+    color: var(--text-color);
     /*background: var(--main-bg-color);*/
     background: transparent;
 }
@@ -40,7 +40,8 @@ body {
     --primary-color: #2F8CA3;
     --secondary-color: #F4AF2D;
     --accent-color: #9CF9FF;
-    --primary-text: #FFFFFF;
+    --text-color: #FFFFFF;
+    --text-color-inverted: #000000;
     /* Font Families */
     --font-iceland: 'Iceland', cursive;
     --font-big-shoulders: 'Big Shoulders Display', sans-serif;

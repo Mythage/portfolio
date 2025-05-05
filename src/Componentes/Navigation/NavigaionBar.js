@@ -1,22 +1,35 @@
 import React from 'react';
 import './NavigationBar.css';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function NavigationBar() {
+    const location = useLocation();
+
     return (
-        <nav>
+        <nav className='navigation-bar'>
             <ul>
-                <li>
-                    <Link to="/">Beginning</Link>
+                <li className={location.pathname === "/home" ? 'active' : ''}>
+                    <NavLink to="/home"
+                    className={({ isActive }) => (isActive ? 'active-link' : undefined)}
+                    >
+                        <h3>Beginning</h3></NavLink>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, est.</p>
                 </li>
                 <li>
-                    <Link to="/achievements">Achievements</Link>
+                    <NavLink to="/achievements"><h3>Achievements</h3></NavLink>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, est.</p>
                 </li>
                 <li>
-                    <Link to="/creations">Creations</Link>
+                    <NavLink to="/creations"><h3>Creations</h3></NavLink>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, est.</p>
                 </li>
                 <li>
-                    <Link to="/about">About Me</Link>
+                    <NavLink to="/about"><h3>About Me</h3></NavLink>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, est.</p>
+                </li>
+                <li>
+                    <NavLink to="/LandingPage"><h3>Landing Page</h3></NavLink>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, est.</p>
                 </li>
             </ul>
         </nav>
