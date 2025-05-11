@@ -1,10 +1,12 @@
 import React from 'react';
 import './Character.css';
+import CharacterImage from '../../assets/img/Character.png';
+import {Link} from 'react-router-dom';
 
 function Character() {
     return (
-        <div>
-            <img src='' alt='a character that repesents me'/>
+        <div className='character-overview'>
+            <img src={CharacterImage} alt='a character that repesents me'/>
             <div>
                 <p>Name</p>
                 <h4>Sietse Nijdam</h4>
@@ -19,7 +21,7 @@ function Character() {
             </div>
             <div>
                 <p>avalability</p>
-                <h4>Open for Hire</h4>
+                <h4><Link to="/openforhire">Open for Hire</Link></h4>
             </div>
             <div>
                 <p>Social</p>
