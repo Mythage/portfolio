@@ -1,35 +1,73 @@
+/* Algemene container voor de character overview */
 .character-overview {
-display: flex;
-    flex-direction: column;
-    gap: 2em;
-    margin-left: 5em;
-    max-width: 200px;
-    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column; /* Stapel elementen verticaal */
+    gap: 2em; /* Ruimte tussen de elementen */
+    margin-left: 5em; /* Marge aan de linkerkant */
+    max-width: 200px; /* Maximale breedte van de container */
 }
 
+/* Stijl voor de character afbeelding */
 .character-overview img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    padding: 1em;
-    border: 1px solid slategrey;
+    width: 100%; /* Afbeelding neemt de volledige breedte van de container in */
+    height: auto; /* Hoogte past zich automatisch aan */
+    object-fit: cover; /* Afbeelding vult de container en behoudt de aspect ratio */
+    padding: 1em; /* Ruimte rondom de afbeelding */
+    border: 1px solid slategrey; /* Rand rondom de afbeelding */
 }
+
+/* Stijl voor de paragrafen (labels) */
 .character-overview p {
-    font-family: var(--font-iceland, serif), serif;
-    font-weight: 500;
-    font-size: 0.9em;
-    padding-bottom: 3px;
-    text-transform: uppercase;
+    font-family: var(--font-iceland, serif), serif; /* Lettertype */
+    font-weight: 500; /* Dikte van het lettertype */
+    font-size: 0.9em; /* Lettergrootte */
+    padding-bottom: 3px; /* Ruimte onder de tekst */
+    text-transform: uppercase; /* Zet de tekst om in hoofdletters */
 }
+
+/* Stijl voor de headings (waarden) */
 .character-overview h4 {
-    font-family: var(--font-big-shoulders, serif), serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.3em;
-    letter-spacing: 0.1em;
-    color: var(--primary-color);
+    font-family: var(--font-big-shoulders, serif), serif; /* Lettertype */
+    text-transform: uppercase; /* Zet de tekst om in hoofdletters */
+    font-weight: 743; /* Dikte van het lettertype */
+    font-size: 1.2em; /* Lettergrootte */
+    letter-spacing: 0.1em; /* Ruimte tussen de letters */
+    color: var(--primary-color); /* Tekstkleur */
 }
-.character-overview button{
-    text-decoration: none;
-    background-color: var(--primary-color);
+
+/* Stijl voor de "Open for Hire" button */
+.overview-button-01 {
+    background-color: var(--primary-color); /* Achtergrondkleur */
+    display: inline-block; /* Zorgt ervoor dat de breedte gerespecteerd wordt en inline elementen mogelijk zijn */
+    width: 100%; /* Neemt de volledige breedte van de parent container in */
+    box-sizing: border-box; /* Padding en border worden meegerekend in de breedte */
+    background-image: url('../../assets/Symbols/ButtonBackdrop.png'); /* Achtergrondafbeelding */
+    background-repeat: no-repeat; /* Achtergrondafbeelding wordt niet herhaald */
+    background-position: right; /* Achtergrondafbeelding wordt rechts gepositioneerd */
+    background-size: auto 100%; /* Achtergrondafbeelding behoudt aspect ratio en vult de hoogte */
+    text-decoration: none; /* Verwijdert de onderstreping van de link */
+    color: var(--main-bg-color); /* Tekstkleur */
+    padding: 3px 5px; /* Ruimte rondom de tekst */
+}
+
+/* Stijl voor de "Open Connection" button */
+.overview-button-02 {
+    text-decoration: none; /* Verwijdert de onderstreping van de link */
+    display: inline-block; /* Zorgt ervoor dat de breedte gerespecteerd wordt en inline elementen mogelijk zijn */
+    width: 100%; /* Neemt de volledige breedte van de parent container in */
+    box-sizing: border-box; /* Padding en border worden meegerekend in de breedte */
+    border: 1px solid var(--primary-color); /* Rand rondom de knop */
+    color: var(--primary-color); /* Tekstkleur */
+    padding: 3px 5px; /* Ruimte rondom de tekst */
+    position: relative; /* Nodig voor de absolute positionering van het envelop icoon */
+}
+
+/* Stijl voor het envelop icoon in de "Open Connection" button */
+.overview-button-02::after {
+    content: '\2709'; /* Unicode voor envelop */
+    position: absolute; /* Absolute positionering binnen de parent (overview-button-02) */
+    right: 5px; /* Plaats 5 pixels vanaf de rechterkant */
+    top: 40%; /* Plaats 40% vanaf de bovenkant */
+    transform: translateY(-50%); /* Verticale centrering */
+    font-size: 1.5em; /* Grootte van het icoon */
 }

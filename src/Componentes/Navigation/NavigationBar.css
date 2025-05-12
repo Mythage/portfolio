@@ -10,7 +10,7 @@
 .navigation-bar li {
     display: inline-block;
     margin: 10px 1em;
-    border : var(--primary-color) 2px solid;
+    border : var(--inactive-color) 2px solid;
     max-width: 151px;
     max-height: 65px;
 
@@ -37,14 +37,14 @@
     background-position: right;
     padding-left: 4px;
     background-size: 40px;
-    background-color: var(--primary-color);
+    background-color: var(--inactive-color);
     background-clip: padding-box;
     margin: -2px;
 }
 .navigation-bar li a.active-link h3 {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--text-color-inverted);
 }
 .navigation-bar li.active {
-    border: var(--accent-color) 2px solid;
+    border: var(--primary-color) 2px solid;
 }

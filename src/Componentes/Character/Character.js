@@ -13,19 +13,19 @@ function Character() {
             </div>
             <div>
                 <p>Occupation</p>
-                <h4>IT servicedek</h4>
+                <h4>IT Servicedesk</h4>
             </div>
             <div>
                 <p>Corporation</p>
                 <h4>Vomar voordeelmarkt</h4>
             </div>
             <div>
-                <p>avalability</p>
-                <h4><Link to="/openforhire">Open for Hire</Link></h4>
+                <p>availability</p>
+                <h4><Link to="/openforhire" className='overview-button-01'>Open for Hire</Link></h4>
             </div>
             <div>
                 <p>Social</p>
-                <h4>Open Connaction</h4>
+                <h4><Link to="/openConection" className='overview-button-02'>Open Connection</Link></h4>
             </div>
         </div>
     )

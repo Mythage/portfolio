@@ -37,6 +37,7 @@ body {
 /* ----------- Root Variables ----------- */
 :root {
     --main-bg-color: #000003;
+    --inactive-color: #193F4A;
     --primary-color: #2F8CA3;
     --secondary-color: #F4AF2D;
     --accent-color: #9CF9FF;
